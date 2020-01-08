@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainVBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="530.0" prefWidth="950.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="445.0" prefWidth="324.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="14.0">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="100.0" text="Error:" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin></Label>
+                              <Label prefHeight="33.0" prefWidth="100.0" text="Method" wrapText="true">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding></Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+                           <children>
+                              <TextField fx:id="error" prefHeight="26.0" prefWidth="176.0" />
+                              <ChoiceBox fx:id="methodField" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="91.0" prefWidth="310.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <CheckBox fx:id="mercury" mnemonicParsing="false" text="Mercury">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="venus" mnemonicParsing="false" text="Venus">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="earth" mnemonicParsing="false" text="Earth">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="mars" mnemonicParsing="false" text="Mars">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+
+                              <CheckBox fx:id="jupiter" mnemonicParsing="false" text="Jupiter">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="saturn" mnemonicParsing="false" text="Saturn">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="uranus" mnemonicParsing="false" text="Uranus">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+
+                              <CheckBox fx:id="neptune" mnemonicParsing="false" text="Neptune">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="other" mnemonicParsing="false" text="Other">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font></CheckBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="78.0" prefWidth="168.0" spacing="13.0">
+                           <children>
+                              <Label text="Distance [A.U]:" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin></Label>
+                              <Label text="Eccentricity:" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="2.0">
+                           <children>
+                              <TextField fx:id="dis" prefWidth="133.0" />
+                              <TextField fx:id="ecc" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <VBox>
+                     <children>
+                        <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addClicked" prefHeight="26.0" prefWidth="120.0" text="ADD SELECTED">
+                           <font>
+                              <Font name="OCR A Extended" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="100.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="316.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="drawButton" mnemonicParsing="false" onAction="#drawClicked" prefHeight="26.0" prefWidth="90" text="DRAW">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearClicked" prefHeight="26.0" prefWidth="90" text="CLEAR">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="txtButton" mnemonicParsing="false" onAction="#txtClicked" prefHeight="26.0" prefWidth="90.0" text="SAVE">
+                                 <font>
+                                    <Font name="OCR A Extended" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="errorTxtBox" editable="false" prefHeight="53.0" prefWidth="250.0" />
+               </children></VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <ScatterChart fx:id="mainChart" legendSide="TOP" prefHeight="704.0" prefWidth="637.0">
+              <xAxis>
+                <NumberAxis minorTickVisible="false" side="BOTTOM" tickLabelsVisible="false" tickMarkVisible="false" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis forceZeroInRange="false" minorTickVisible="false" side="LEFT" tickLabelsVisible="false" tickMarkVisible="false" />
+              </yAxis>
+            </ScatterChart>
+         </children></HBox>
+   </children>
+</VBox>

@@ -1,0 +1,7 @@
+
+.label{
+    -fx-background-image: url("stars.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+    -fx-alignment: center;
+}
